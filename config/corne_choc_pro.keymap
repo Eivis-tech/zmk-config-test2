@@ -129,10 +129,10 @@
                         // |       |      |      |       |       |            |              |      |       |       |       |       |       |
                         //                       |       | MCLK  |    LCLK    |              | RCLK |       | TOG   |
                                                 bindings = <
-                        &none     &none    &none            &msc SCRL_UP      &none             &none       &none       &none      &none       &none            &mmv MOVE_UP     &none             &none     &none
-                        &none     &none    &msc SCRL_LEFT   &msc SCRL_DOWN    &msc SCRL_RIGHT   &none       &none       &none      &none       &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT   &none     &none
-                        &none     &none    &none            &none             &none             &none                              &none       &none            &none            &none             &none     &none
-                                                            &none             &mkp MCLK         &mkp LCLK                          &mkp RCLK   &none            &tog MOUSE
+                        &none     &none    &none            &msc SCRL_UP      &none             &none       &none       &none      &none       &none            &mmv MOVE_UP     &none             &none     &trans
+                        &trans    &none    &msc SCRL_LEFT   &msc SCRL_DOWN    &msc SCRL_RIGHT   &none       &none       &none      &none       &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT   &none     &trans
+                        &trans    &none    &none            &none             &none             &none                              &none       &none            &none            &none             &none     &trans
+                                                            &trans            &mkp MCLK         &mkp LCLK                          &mkp RCLK   &none            &tog MOUSE
                         >;
                 };
         };
