@@ -26,55 +26,11 @@
             bindings = <&kp COMMA>, <&kp PERIOD>;
         };
 
-        dt_hash_amp: dt_hash_amp {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DT_HASH_AMP";
-            #binding-cells = <0>;
-            bindings = <&kp HASH>, <&kp AMPS>;
-        };
-
-        dt_excl_quest: dt_excl_quest {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DT_EXCL_QUEST";
-            #binding-cells = <0>;
-            bindings = <&kp EXCL>, <&kp QUESTION>;
-        };
-
-        dt_parentheses: dt_parentheses {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DT_PARENTHESES";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_PARENTHESIS>, <&kp RIGHT_PARENTHESIS>;
-        };
-
-        dmt_ctrl_hash_amp: dmt_ctrl_hash_amp {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DMT_CTRL_HASH_AMP";
-            #binding-cells = <0>;
-            bindings = <&mt LEFT_CONTROL HASH>, <&kp AMPS>;
-        };
-
         dmt_alt_excl_quest: dmt_alt_excl_quest {
             compatible = "zmk,behavior-tap-dance";
             label = "DMT_ALT_EXCL_QUEST";
             #binding-cells = <0>;
             bindings = <&mt LEFT_ALT EXCLAMATION>, <&kp QUESTION>;
-        };
-
-        dmt_shift_parentheses: dmt_shift_parentheses {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DMT_SHIFT_PARENTHESES";
-            #binding-cells = <0>;
-            bindings =
-                <&mt LEFT_SHIFT LEFT_PARENTHESIS>,
-                <&kp RIGHT_PARENTHESIS>;
-        };
-
-        dmt_ctrl_dollar_pct: dmt_ctrl_dollar_pct {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DMT_CTRL_DOLLAR_PCT";
-            #binding-cells = <0>;
-            bindings = <&mt LEFT_CONTROL DOLLAR>, <&kp PERCENT>;
         };
 
         dmt_alt_grave_tilde: dmt_alt_grave_tilde {
@@ -160,7 +116,7 @@
             bindings = <&kp>, <&bt_sel_0>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <100>;
         };
 
         ht_mt_bt1: ht_mt_bt1 {
@@ -169,7 +125,7 @@
             bindings = <&kp>, <&bt_sel_1>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <100>;
         };
 
         dmt_shift_hash_amp: dmt_shift_hash_amp {
