@@ -183,6 +183,27 @@
                 <&kp LESS_THAN>,
                 <&kp LEFT_BRACE>;
         };
+
+        dt_hash_amp: dt_hash_amp {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DT_HASH_AMP";
+            #binding-cells = <0>;
+            bindings = <&kp HASH>, <&kp AMPS>;
+        };
+
+        dt_dollar_pct: dt_dollar_pct {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DT_DOLLAR_PCT";
+            #binding-cells = <0>;
+            bindings = <&kp DOLLAR>, <&kp PRCNT>;
+        };
+
+        dmt_cmd_exc_quest: dmt_cmd_exc_quest {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DMT_CMD_EXC_QUEST";
+            #binding-cells = <0>;
+            bindings = <&mt LEFT_GUI EXCL>, <&kp QUESTION>;
+        };
     };
 
     combos {
@@ -304,30 +325,30 @@
         lower_layer {
             display-name = "QUERTY L";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mt GLOBE C_VOL_UP  &kp Q   &kp W       &kp E             &kp R  &kp T  &dmt_shift_hash_amp
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp C_VOL_DN        &kp A   &kp S       &kp D             &kp F  &kp G  &dmt_alt_excl_quest
-&trans  &trans  &trans  &trans  &trans  &trans                              &kp Z   &kp X       &kp C             &kp V  &kp B  &kp LEFT_GUI
-                        &trans  &trans  &trans                              &trans  &kp C_PREV  &mt C_NEXT LCTRL
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mt GLOBE TAB  &kp Q   &kp W       &kp E             &kp R  &kp T  &mt LEFT_SHIFT BACKSPACE
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp ENTER      &kp A   &kp S       &kp D             &kp F  &kp G  &mt LEFT_ALT ESCAPE
+&trans  &trans  &trans  &trans  &trans  &trans                         &kp Z   &kp X       &kp C             &kp V  &kp B  &mt LEFT_GUI RIGHT
+                        &trans  &trans  &trans                         &trans  &kp C_PREV  &mt C_NEXT LCTRL
             >;
         };
 
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp GLOBE         &kp NUMBER_1    &kp NUMBER_2        &kp NUMBER_3     &kp NUMBER_4     &kp NUMBER_0       &dmt_shift_dollar_pct
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT_COMMAND  &dt_quotes      &dt_asterisk_caret  &dt_lt_gt        &dt_pipe_bslash  &dt_fslash_uscore  &dmt_alt_grave_tilde
-&trans  &trans  &trans  &trans  &trans  &trans                            &tt_left_brace  &tt_right_brace     &dt_min_plus     &dt_colons       &dt_eq_at          &mt LEFT_GUI X
-                        &trans  &trans  &trans                            &trans          &trans              &rgb_ug RGB_TOG
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mt GLOBE C_VOL_UP  &kp NUMBER_1    &kp NUMBER_2        &kp NUMBER_3     &kp NUMBER_4     &kp NUMBER_0       &dmt_shift_hash_amp
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp C_VOL_DN        &dt_quotes      &dt_asterisk_caret  &dt_dollar_pct   &dt_pipe_bslash  &dt_fslash_uscore  &dmt_alt_grave_tilde
+&trans  &trans  &trans  &trans  &trans  &trans                              &tt_left_brace  &tt_right_brace     &dt_min_plus     &dt_colons       &dt_eq_at          &dmt_cmd_exc_quest
+                        &trans  &trans  &trans                              &trans          &trans              &rgb_ug RGB_TOG
             >;
         };
 
         extra_layer_1 {
             display-name = "EXTRA";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 0  &bt BT_CLR
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans        &trans        &trans        &bt BT_NXT    &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans        &trans        &trans        &bt BT_PRV    &bt BT_PRV    &bt BT_NXT
-                        &trans  &trans  &trans                  &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp GLOBE  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 0  &bt BT_CLR
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans        &trans        &trans        &trans        &bt BT_NXT    &kp LEFT_ALT
+&trans  &trans  &trans  &trans  &trans  &trans                     &trans        &trans        &trans        &bt BT_PRV    &bt BT_PRV    &bt BT_NXT
+                        &trans  &trans  &trans                     &trans        &trans        &kp RCTRL
             >;
         };
     };
