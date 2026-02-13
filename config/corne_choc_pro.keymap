@@ -54,16 +54,6 @@
         };
     };
 
-    macros {
-        lm_gui: lm_gui {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press>, <&kp LGUI &mo 2>, <&macro_release>;
-
-            label = "LM_GUI";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
