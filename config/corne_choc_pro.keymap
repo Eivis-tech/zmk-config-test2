@@ -41,7 +41,7 @@
 
         go_home {
             bindings = <&to 0>;
-            key-positions = <42 33>;
+            key-positions = <41 32>;
         };
     };
 
@@ -102,10 +102,10 @@
         mouse {
             display-name = "mouse";
             bindings = <
-&kp ESCAPE  &kp F11  &mkp MB5   &mkp MB4   &none  &kp HOME  &trans  &trans  &msc SCRL_UP    &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &none   &trans
-&kp TAB     &none    &mkp RCLK  &mkp MCLK  &none  &kp END   &trans  &trans  &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none   &trans
-&none       &none    &none      &none      &none  &kp ESC                   &none           &msc SCRL_LEFT  &trans          &msc SCRL_RIGHT  &trans  &trans
-                                &trans     &mo 2  &trans                    &trans          &to 0           &trans
+&kp ESCAPE  &kp F11  &mkp MB5   &none      &mkp MB4   &kp HOME  &trans  &trans  &msc SCRL_UP    &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &none   &trans
+&kp TAB     &none    &mkp RCLK  &mkp MCLK  &mkp LCLK  &kp END   &trans  &trans  &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none   &trans
+&none       &none    &none      &none      &none      &kp ESC                   &none           &msc SCRL_LEFT  &trans          &msc SCRL_RIGHT  &trans  &trans
+                                &trans     &mo 2      &trans                    &trans          &to 0           &trans
             >;
         };
 
