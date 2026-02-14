@@ -146,5 +146,14 @@
                               &trans  &trans       &trans                  &trans    &trans  &trans
             >;
         };
+
+        gaming {
+            bindings = <
+&kp TAB    &kp GRAVE  &kp Q  &kp W   &kp E   &kp F1   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp LSHFT  &kp ENTER  &kp A  &kp S   &kp D   &kp F2   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp LCTRL  &kp LCTRL  &kp Z  &kp X   &kp C   &kp F10                  &trans  &trans  &trans  &trans  &trans  &trans
+                             &trans  &trans  &trans                   &trans  &trans  &trans
+            >;
+        };
     };
 };
