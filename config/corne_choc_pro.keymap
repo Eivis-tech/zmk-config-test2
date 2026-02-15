@@ -52,6 +52,36 @@
             bindings = <&to 0>;
             key-positions = <41 32>;
         };
+
+        bt0 {
+            bindings = <&bt BT_SEL 0>;
+            key-positions = <32 33>;
+        };
+
+        bt1 {
+            bindings = <&bt BT_SEL 1>;
+            key-positions = <32 33>;
+        };
+
+        bt2 {
+            bindings = <&bt BT_SEL 2>;
+            key-positions = <32 33>;
+        };
+
+        bt-clear {
+            bindings = <&bt BT_CLR>;
+            key-positions = <29 28>;
+        };
+
+        mouse-mode {
+            bindings = <&to 3>;
+            key-positions = <34 35>;
+        };
+
+        gaming-mode {
+            bindings = <&to 6>;
+            key-positions = <23 22>;
+        };
     };
 
     macros {
